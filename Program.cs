@@ -1,8 +1,15 @@
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
+using QueJugadorApp.Data;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
+// Injecting ApplicationDbContext,Tells the application to take ApplicationDbContext as sqldatabase with Connection string with key = "PlayersPortal" [appsettings.json]
+
+builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("PlayersPortal")));
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "F:\\QueJugadorApp\\QueJugadorApp.csproj": {}
+    "D:\\User-Abhi\\QueJugador\\QueJugadorApp.csproj": {}
   },
   "projects": {
-    "F:\\QueJugadorApp\\QueJugadorApp.csproj": {
+    "D:\\User-Abhi\\QueJugador\\QueJugadorApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\QueJugadorApp\\QueJugadorApp.csproj",
+        "projectUniqueName": "D:\\User-Abhi\\QueJugador\\QueJugadorApp.csproj",
         "projectName": "QueJugadorApp",
-        "projectPath": "F:\\QueJugadorApp\\QueJugadorApp.csproj",
-        "packagesPath": "C:\\Users\\lenovo\\.nuget\\packages\\",
-        "outputPath": "F:\\QueJugadorApp\\obj\\",
+        "projectPath": "D:\\User-Abhi\\QueJugador\\QueJugadorApp.csproj",
+        "packagesPath": "C:\\Users\\arjun\\.nuget\\packages\\",
+        "outputPath": "D:\\User-Abhi\\QueJugador\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\arjun\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,6 +22,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -47,7 +48,7 @@
           "dependencies": {
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[9.0.0-preview.6.24327.4, )"
+              "version": "[8.0.7, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
@@ -75,7 +76,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
