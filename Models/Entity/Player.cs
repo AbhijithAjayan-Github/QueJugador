@@ -15,7 +15,6 @@ namespace QueJugadorApp.Models.Entity
       public string PlayerMail {get;set;}
       public string PlayerPhone {get;set;}
       public string PlayerPosition {get;set;}
-      
       public string PlayerGroup {get;set;}
     }
 }
