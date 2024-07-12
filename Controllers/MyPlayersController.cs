@@ -10,7 +10,7 @@ namespace QueJugadorApp.Controllers
     {
         private readonly ApplicationDbContext dbContext;
 
-        public MyPlayersController(ApplicationDbContext DbContext) 
+        public MyPlayersController(ApplicationDbContext DbContext)
         {
             dbContext = DbContext;
         }
@@ -45,10 +45,39 @@ namespace QueJugadorApp.Controllers
         }
         // To add list functionality
         [HttpGet]
-        public async Task <IActionResult> List(AddPlayerViewModel ViewModel)
+        public async Task<IActionResult> List(AddPlayerViewModel ViewModel)
         {
-           var Players = await dbContext.MyPlayers.ToListAsync();
+            var Players = await dbContext.MyPlayers.ToListAsync();
             return View(Players);
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> Edit(Guid Id)
+        {
+            var Player = await dbContext.MyPlayers.FindAsync(Id);
+            return View(Player);
+        }
+        [HttpPost]
+        public async Task<IActionResult> Edit(Player ViewModel)
+        {
+            if (ModelState.IsValid)
+            {
+                var Player = await dbContext.MyPlayers.FindAsync(ViewModel.Id);
+                if (Player != null)
+                {
+                    Player.PlayerName = ViewModel.PlayerName;
+                    Player.Age = ViewModel.Age;
+                    Player.PlayerAddress = ViewModel.PlayerAddress;
+                    Player.PlayerMail = ViewModel.PlayerMail;
+                    Player.PlayerPhone = ViewModel.PlayerPhone;
+                    Player.PlayerPosition = ViewModel.PlayerPosition;
+                    Player.PlayerGroup = ViewModel.PlayerGroup;
+
+                    await dbContext.SaveChangesAsync();
+                    return RedirectToAction("List", "MyPlayers");
+                }
+            }
+            return View(ViewModel); // Return the view with validation errors
         }
     }
 }

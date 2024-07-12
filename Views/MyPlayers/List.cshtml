@@ -5,36 +5,39 @@
 }
 @model List<QueJugadorApp.Models.Entity.Player>
 
-<h1>Players List</h1>
-<table class="table">
-    <thead>
-        <tr>
-            <th>ID</th>
-            <th>Name</th>
-            <th>Age</th>
-            <th>Address</th>
-            <th>Email ID</th>
-            <th>Phone Number</th>
-            <th>Position</th>
-            <th>Squad</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach(var Player in Model)
-        {
+<h1 class="text-center mb-4">Players List</h1>
+<div class="table-responsive">
+    <table class="table table-striped table-bordered">
+        <thead class="text-dark text-center">
             <tr>
-                <td>@Player.Id</td>
-                <td>@Player.PlayerName</td>
-                <td>@Player.Age</td>
-                <td>@Player.PlayerAddress</td>
-                <td>@Player.PlayerMail</td>
-                <td>@Player.PlayerPhone</td>
-                <td>@Player.PlayerPosition</td>
-                <td>@Player.PlayerGroup</td>
-                <td>
-                <a>Edit</a>
-                </td>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Address</th>
+                <th>Email ID</th>
+                <th>Phone Number</th>
+                <th>Position</th>
+                <th>Squad</th>
+                <th>Action</th>
             </tr>
-        }
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+            @foreach (var Player in Model)
+            {
+                <tr>
+                    <td>@Player.Id</td>
+                    <td>@Player.PlayerName</td>
+                    <td>@Player.Age</td>
+                    <td>@Player.PlayerAddress</td>
+                    <td>@Player.PlayerMail</td>
+                    <td>@Player.PlayerPhone</td>
+                    <td>@Player.PlayerPosition</td>
+                    <td>@Player.PlayerGroup</td>
+                    <td>
+                        <a class="btn btn-primary" asp-controller="MyPlayers" asp-action="Edit" asp-route-Id="@Player.Id">Edit</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

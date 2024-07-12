@@ -11,4 +11,10 @@
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
   </ItemGroup>
+  <ItemGroup>
+    <UpToDateCheckInput Remove="Views\MyPlayers\Edit.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="Views\MyPlayers\Edit.cshtml" />
+  </ItemGroup>
 </Project>
