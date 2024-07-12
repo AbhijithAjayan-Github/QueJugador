@@ -12,7 +12,15 @@
             <tr>
                 <th>ID</th>
                 <th>Name</th>
-                <th>Age</th>
+                <th>
+                    <div class="d-flex justify-content-center align-items-center">
+                        <span>Age</span>
+                        <div class ="d-flex flex-column ms-2">
+                            <a asp-action="List" asp-route-sortOrder="asc" class="sort-arrow">&#9650;</a>
+                            <a asp-action="List" asp-route-sortOrder="desc" class="sort-arrow">&#9660;</a>
+                        </div>
+                    </div>
+                </th>
                 <th>Address</th>
                 <th>Email ID</th>
                 <th>Phone Number</th>
@@ -21,7 +29,7 @@
                 <th>Action</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="text-center">
             @foreach (var Player in Model)
             {
                 <tr>
@@ -41,3 +49,8 @@
         </tbody>
     </table>
 </div>
+<style>
+    .sort-arrow {
+        line-height: 1; 
+    }
+</style>

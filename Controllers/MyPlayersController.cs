@@ -44,10 +44,31 @@ namespace QueJugadorApp.Controllers
             return View(ViewModel); // Return the view with validation errors
         }
         // To add list functionality
-        [HttpGet]
+/*        [HttpGet]
         public async Task<IActionResult> List(AddPlayerViewModel ViewModel)
         {
             var Players = await dbContext.MyPlayers.ToListAsync();
+            return View(Players);
+        }*/
+
+        // View List + sorting Age
+        [HttpGet]
+        public async Task<IActionResult>List(string sortOrder) 
+        {
+            var Players = await dbContext.MyPlayers.ToListAsync();
+
+            switch(sortOrder)
+            {
+                case "asc":
+                    Players = Players.OrderBy(p => p.Age).ToList();
+                    break;
+                case "desc":
+                    Players = Players.OrderByDescending(p => p.Age).ToList();
+                    break;
+                default:
+                    break; // Dont have to sort
+
+            }
             return View(Players);
         }
 
