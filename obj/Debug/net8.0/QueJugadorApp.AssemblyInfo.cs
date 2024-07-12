@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("QueJugadorApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1ccde2b779b24bd8a5a4ab3bb304a4b3b7e8fdd2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0e5c2a26ef96e24d183906bdd430ef67921d9e04")]
 [assembly: System.Reflection.AssemblyProductAttribute("QueJugadorApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("QueJugadorApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
