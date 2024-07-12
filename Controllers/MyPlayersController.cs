@@ -38,7 +38,7 @@ namespace QueJugadorApp.Controllers
                 await dbContext.MyPlayers.AddAsync(player);
                 await dbContext.SaveChangesAsync();
 
-                return RedirectToAction("Index", "Home"); // Redirect to home page after successful addition
+                return RedirectToAction("List", "MyPlayers"); // Redirect to List page after successful addition
             }
 
             return View(ViewModel); // Return the view with validation errors
@@ -78,6 +78,19 @@ namespace QueJugadorApp.Controllers
                 }
             }
             return View(ViewModel); // Return the view with validation errors
+        }
+
+        [HttpPost]
+        public async Task <IActionResult> Delete(Player ViewModel)
+        {
+            var Player = await dbContext.MyPlayers.AsNoTracking().FirstOrDefaultAsync(x=>x.Id==ViewModel.Id);
+            if (Player != null)
+            {
+                dbContext.MyPlayers.Remove(ViewModel);
+                await dbContext.SaveChangesAsync();
+
+            }
+            return RedirectToAction("List", "MyPlayers");
         }
     }
 }
