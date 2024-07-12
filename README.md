@@ -1,0 +1,1 @@
+QueJugador is a web application designed for managing player information for a football club. It allows CRUD (Create, Read, Update, Delete) operations on player records, providing a user-friendly interface for managing player details such as name, age, address, email, phone number, position, and squad affiliation.

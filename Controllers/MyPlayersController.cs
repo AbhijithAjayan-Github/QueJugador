@@ -43,6 +43,7 @@ namespace QueJugadorApp.Controllers
 
             return View(ViewModel); // Return the view with validation errors
         }
+
         // To add list functionality
 /*        [HttpGet]
         public async Task<IActionResult> List(AddPlayerViewModel ViewModel)
